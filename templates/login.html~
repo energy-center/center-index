@@ -1,0 +1,19 @@
+{% extends "base.html" %}{% block content %}
+
+
+ <div id="templatemo_middle_column">
+                <div class="leftcolumn_box01_top">
+                    <h2>Customer Login</h2>
+                </div>
+                <div class="leftcolumn_box01_bottom">
+                    <form method="post" action=/login/>
+                    {%csrf_token%}
+                      <div class="form_row"><label>用户</label><input class="inputfield" name="username" type="text" id="email_addremss"/></div>
+                        <div class="form_row"><label>密码</label><input class="inputfield" name="password" type="password" id="password"/></div>
+							<!--	<a href="/register/" ><input class="button" type="button" name="Submit" value="注册" /></a>                -->       
+                       <input class="button" type="submit" name="Submit" value="登录" />
+                    </form>
+                </div>            
+            </div>
+
+{% endblock %}

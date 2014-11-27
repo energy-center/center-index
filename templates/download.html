@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}download{%endblock%}
+{% block content %}
+
+<div class="content-center-1">
+<div class="">
+			<div>
+			{% for i in list_file %}
+			<li><a href="http://23.27.112.238//{{ i.title }}"> {{ i.author }} </a></li>
+			{% endfor %}
+			</div>
+</div></div>
+	
+	
+	{%endblock%}

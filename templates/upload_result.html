@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="content-center-1">
+
+<div class="">
+			<h1>You Made It!</h1>	<div>
+			{% for i in list_file %}
+			<li>{{ i.title }}</li>
+			{% endfor %}
+			</div>		
+</div></div>
+	
+	
+	{%endblock%}

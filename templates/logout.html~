@@ -1,0 +1,8 @@
+{% extends "base.html" %}{% block content %}
+
+
+<div id="templatemo_middle_column">
+                <h1>您已经登出系统</h1>         
+            </div>
+
+{% endblock %}

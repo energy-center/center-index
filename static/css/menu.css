@@ -1,0 +1,273 @@
+/* CSS Document */
+body,div,ul,li,a,dl,dd,span,p{
+	margin:0px;
+	padding:0px;
+}
+body{
+	font-family:"宋体",Arial,Verdana,Sans-Serif;
+	font-size:12px;
+	font-color:#777b83;
+}
+li{
+	list-style-type:none;
+}
+a{
+	text-decoration:none;
+	color: #000000;
+}
+/*header css*/
+.header{
+	margin:0 auto;
+	width:960px;
+	height:130px;
+}
+.header-top{
+	width:960px;
+	height:100px;
+}
+.nav li{
+	float:left;
+	position:relative;
+	/*background:-webkit-linear-gradient(top,#f0f0f0,#ddd);*/
+	background: url(/static/imge/nav_bg_2.gif);
+}
+.nav ul li:first-child{
+	border-top-left-radius:5px;
+}
+.nav ul li:last-child{
+	border-top-right-radius:5px;
+}
+.nav li:hover{
+	color：#fff;
+	background:url(/static/imge/nav_selected_2.gif);
+	}
+.nav li:hover .nav-top{
+	color:#fff;
+}
+.nav .nav-top{
+	width:106px;
+	height:30px;
+	line-height:30px;
+	display:block;
+    text-align:center;
+	font-size:14px;
+}
+.nav .nav-top:hover{
+	color:#fff;
+}
+/*.nav .nav-top:hover{
+	background-color:.0f0;
+}*/
+.nav dl{
+	display:none;
+	position:absolute;
+	top:30px;
+	width:auto;
+	border:1px solid #ddd;
+	border-top:none;
+	border-radius:3px;
+}
+.nav dd{
+	width:auto;
+	height:auto;
+}
+.nav dl a{
+	display:block;
+	height:20px;
+	width:100px;
+	line-height:22px;
+	padding-left:25px;
+	padding-right:35px;
+	text-align:left;
+	border-top:1px solid #ddd;
+	color:#777b83;
+	background-color:#fff;
+}
+.nav dl a:hover{
+	color:#368ee0;
+}
+.logo{
+	float:left;
+	position:relative;
+	top:10px;
+}
+.logo img{
+	/*width:350px;
+	height:72px;*/
+	width:413px;
+	height:86px;
+}
+.header-top ul{  
+    width:50%;
+	float:right;
+	position:relative;
+	top:30px;
+}
+.connect li{
+	float:right;
+}
+.search{
+	padding-top:13px;
+}
+.search form{
+	float:right;
+}
+/*content css*/
+.content{
+	margin:0 auto;
+	width:960px;
+	height:auto;
+}
+.img-show{
+	margin:0px auto;
+	width:960px;
+	height:249px;
+}
+.img-show img{
+	width:960px;
+	height:249px;
+}
+.content-list{
+	position:relative;
+	top:10px;
+	width:100%;
+	height:380px;
+	background-color:#fff;
+}
+.left-1{
+	float:left;
+	width:200px;
+	height:380px;
+	border:1px solid #ddd;
+	border-radius:10px;
+	box-shadow:inset 0 -1px #ddd;
+}
+.left-11,.left-12{
+	height:40%;
+	margin:0px 15px 0px 15px;
+}
+.left-2{
+	float:left;
+	width:450px;
+	height:380px;
+	margin-left:10px;
+	border:1px solid #ddd;
+	border-radius:10px;
+	box-shadow:inset 0 -1px #ddd;
+}
+.left-21{
+	margin:0px 15px 0px 15px;
+}
+    
+.left-21 ul a{
+	display:block;
+	padding-left:5px;
+	height:18px;
+	color:#000;
+	font-size:13px;
+	padding-top:5px;
+	border-bottom:1px dotted #00c;
+}
+.left-3{
+	float:left;
+	width:280px;
+	height:380px;
+	margin-left:10px;
+	border:1px solid #ddd;
+	border-radius:10px;
+	box-shadow:inset 0 -1px #ddd;
+}
+.content-list:after{
+	content:"";
+	display:block;
+	visibility:hidden;
+    height:0px;
+	clear:both;
+}
+.text{
+	width:960px;
+	height:30px;
+	margin:0 auto;
+	margin-top:20px;
+	line-height:30px;
+	clear:both;
+	text-align:center;
+	background-color:#ddd;
+	border-radius:3px;
+}
+.info{
+	height:19px;
+	font-size:18px;
+	color:#03C;
+	cursor:move;
+	border-bottom:2px solid #00C;
+	padding:5px 0px 3px 5px;
+	
+}
+.left-1-list li a{
+	padding-left:5px;
+	color:#000;
+	height:50px;
+	line-height:50px;
+	display:block;
+	font-size:13px;
+	border-bottom:1px dotted #00c;
+}
+/*left-3 css*/
+.picture{
+	margin-left:15px;
+	margin-right:15px;
+}
+.pic-show{
+	height:196px;
+	border-bottom:1px solid .ddd;
+}
+
+/*footer css*/
+.footer{
+	margin:0 auto;
+	width:960px;
+	height:30px;
+	margin-top:10px;
+	background-color:#ccc;
+	clear:both;
+	background-color:#1878bc;
+	border-radius:3px;
+}
+.copyright{
+	width:100%;
+	height:30px;
+	line-height:34px;
+	color:#fff;
+	text-align:center;
+	vertical-align:middle;
+}
+/*二级页面内容的*/
+.sub-content{
+	height:auto;
+
+}
+.content-left-2{
+	float:right;
+	width:740px;	
+	margin-bottom:20px;
+	border:1px solid #ddd;
+	box-shadow:inset 0px -1px 1px #ddd;
+	border-radius:10px;
+}
+.content-center-1{
+	/*float:right;*/
+	margin: auto;
+	width:940px;
+	margin-top: 10px;	
+	margin-bottom:20px;
+	border:1px solid #ddd;
+	box-shadow:inset 0px -1px 1px #ddd;
+	border-radius:10px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.content-center-1 p {
+	margin-bottom: 20px;
+	font-size: 14px;
+}

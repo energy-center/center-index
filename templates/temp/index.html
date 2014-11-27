@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+            {% block login %}
+            {%if user.is_authenticated%}
+           <a href="/logout/" ><input class="button" type="button" name="Submit" value="注销" /></a>             
+            {%else%}
+            <div id="leftcolumn_box01">
+                <div class="leftcolumn_box01_top">
+                    <h2>Customer Login</h2>
+                </div>
+                <div class="leftcolumn_box01_bottom">
+                    <form method="post" action="/login/" >
+                    {%csrf_token%}
+                      <div class="form_row"><label>用户</label><input class="inputfield" name="username" type="text" id="email_addremss"/></div>
+                        <div class="form_row"><label>密码</label><input class="inputfield" name="password" type="password" id="password"/></div>
+								<a href="/register/" ><input class="button" type="button" name="Submit" value="注册" /></a>                       
+                       <input class="button" type="submit" name="Submit" value="登录" />
+                    </form>
+                </div>            
+            </div>
+            {%endif%} 
+            {% endblock %} 
+            
+             {% block content %}
+             <!-- start of middle column -->
+        
+    	<div id="templatemo_middle_column">
+        
+        	<h1>中心简介</h1>
+          <p>智能系统及再生能源研究中心”由中组部首批“千人计划”入选者宋永端教授创建于2009年9月9日。目前中心拥有全职教学科研人员8名，其中教授1名，副教授3名，讲师4名。 在过去三年里研究中心取得了一系列标志性成果，发表和完成高水平学术论文近130篇，申请发明专利14项，获批专著7部，纵向项目13项，包括“国家自然科学基金重点项目”、“科技部973重大基础研究项目”、“科技部863重大支撑计划项目”等。两名研究生荣获2011年中国控制与决策年会最佳青年论文奖。    
+          <a href="/about/">Read more...</a></p>
+          <br />
+            
+            <div id="section1">
+            	<h3>文章列表</h3>
+				{% for i in list_blog %}			
+              <h4><a href="/blog/{{ i.id }}/">{{ i.title }}</a></h4>
+ 					{% endfor %}
+          </div>
+            
+            <div id="section2">
+                <div class="section2_top">
+                    <h2>Lorem ipsum dolor</h2>
+                </div>
+                <div class="section2_bottom">
+			      	<ul>
+                        <li><a href="#">Vestibulum blandit lacus</a></li>
+                        <li><a href="#">Mauris blandit vehicula</a></li>
+                        <li><a href="#">Proin consectetuer</a></li>
+                        <li><a href="http://www.flashmo.com" target="_parent">Flash Resources</a></li>
+                        <li><a href="http://www.templatemo.com" target="_parent">Website Templates</a></li>
+                        <li><a href="#">Cras urna metus</a></li>
+                        <li><a href="#">Nunc quis seme</a></li>
+					</ul>
+                    <div class="more_button"><a href="#">More...</a></div>
+            	</div>
+            </div>
+            
+        </div>
+        
+        <!-- end of middle column -->
+             {% endblock %}
+           
+           

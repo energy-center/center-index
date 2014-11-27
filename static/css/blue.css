@@ -1,0 +1,10 @@
+/* CSS Document */
+
+.red-div,.blue-div{
+	width:200px;
+	height:200px;
+	float:left;
+	margin:20px;
+	background-color:#0f0;
+	border:2px solid #ccc;
+}

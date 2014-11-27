@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}user{%endblock%}
+{% block content %}
+
+{% if perms.main %}
+<div class="">
+	<div class="">
+			<div class="">
+				<a href="/index/" >Home</a>&nbsp;&diams;&nbsp;<a href="/download/" >user</a>
+			</div>
+			<form enctype="multipart/form-data" method="POST" action="/upload/">
+	{% csrf_token %}
+	<input type="file" name="your_file" />
+	<input type="submit" value="上传文件" />
+</form>
+	</div></div>
+{% else %}
+    <p>对不起，你无权上传文件！</p>
+{% endif %}
+
+{%endblock%}

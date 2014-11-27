@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+
+
+ {% block content %}
+ 
+ <!--content list 1 2 3-->
+ <div class="content sub-content">
+ <div class="content-list">
+   <div class="left-1">
+      <div class="left-11">
+         <p class="info">信息公告</p>
+         <ul class="left-1-list">
+         <li><a href="#">智能及再生能源中心公告</a></li>
+         <li><a href="#">学生收费</a></li>
+         </ul>
+      </div>
+   <div class="left-12">
+      <p class="info">信息公告</p>
+      <ul class="left-1-list">
+      <li><a href="#">智能及再生能源中心公告</a></li>
+      <li><a href="#">学生收费</a></li>
+      </ul>
+   </div>
+   </div>
+   
+   <div class="left-2">
+      <div class="left-21">
+      <p class="info">中心新闻</p>
+      <ul>
+         {% for i in list_new %} 
+      <li><a href="/blog/{{ i.id }}/">{{ i.title }}</a></li>            
+         {% endfor %}
+      </ul>
+      </div>
+   </div>
+   <div class="left-3">
+      <div class="picture">
+      <p class="info">图片新闻</p>
+      <div class="pic-show"></div>
+      </div>
+   </div>
+   </div>
+ </div>
+    <!--content list 1 2 3 end-->
+  {% endblock %}

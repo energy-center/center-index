@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% block title %}download{%endblock%}
+{% block content %}
+
+
+
+<meta name="description" content="{{blog.title}}" /> 
+
+<style>
+.blog {
+	margin:10px 10px;
+}
+.message{
+	border-top:thin solid #dddddd;
+	padding-top:10px;
+}
+
+.the_message{word-break: break-all;}
+.blog_title{padding-bottom:10px;}
+.form-sub{
+	padding:15px 5px 5px 5px;
+	border-top:thin solid #dddddd;
+	text-align:right;
+}
+
+.span9{	
+	background-color:#fff;
+	border:thin solid #dddddd;
+	border-radius:5px;
+}
+.alert{
+	margin-top:10px;
+}
+.the_message{
+	padding:10px 20px 5px 10px;
+	border-top:thin solid #dddddd;
+}
+#message_time{
+	text-align:right;
+	padding-right:30px;
+}
+#message_time a{
+	font-size:10px;
+}
+.mainblog{
+	margin-top:50px;
+}
+.message_text{
+	width:510px;
+}
+.form-sub{
+	margin-top:15px;
+}
+.span9{
+background-color: #fff;
+border: thin solid #dddddd;
+border-radius: 5px;
+}
+.container{
+width: 940px;
+margin-left: auto;
+margin-right: auto;
+}
+</style>
+
+<div class="container mainblog">
+<div class="span9">
+			<div class="empire_nav">
+				<a href="/index/" >Home</a>&nbsp;&diams;&nbsp;<a href="/download/" >download</a>
+			</div>
+			<div>
+			{% for i in list_file %}
+			<li><a href="http://127.0.0.1:8000/{{ i.title }}"> {{ i.author }} </a></li>
+			{% endfor %}
+			</div>
+</div></div>
+	
+	
+	{%endblock%}

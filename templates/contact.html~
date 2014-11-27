@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}contact{% endblock %}
+{% block content %}
+
+
+<div id="templatemo_middle_column">
+	<div class="body">
+				<ul>
+				{% for i in list_test %}			
+					<li>
+						<div>
+							<h4>{{ i.title }}</h4>
+						</div>	
+					</li>
+					{% endfor %}
+				</ul>
+		</div>
+	</div> 
+	{%endblock%}

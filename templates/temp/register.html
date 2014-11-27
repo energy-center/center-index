@@ -1,0 +1,43 @@
+{% extends "base.html" %}{% block content %}
+
+
+	<div class="span7">
+
+	  <form class="well form-horizontal" action=/register/ method="post">
+		<div class="register">
+			<h2 id="register"><a href="#">申请成为帝国国民</a></h2>
+		</div>
+		<fieldset>
+	  {%csrf_token%}
+		<input type='hidden' name='csrfmiddlewaretoken' value='HjIHiBvb05gghn45gOSJMvLYnmPmZZiK' />
+						{% if errors%}
+						{% for error in errors %}
+						<div class="alert alert-error">
+						  <a class="close" data-dismiss="alert">×</a>
+						  <strong>错误!</strong> {{error}}
+						</div>
+						{%endfor%}
+
+						{%endif%}		  	
+
+		  <div class="control-group">
+			<label class="control-label" for="id_username"><p>用户名：</p></label> 
+			<input class="input-xlarge" id="id_username" maxlength="30" placeholder="请使用半角的 a-z 或数字 0-9" name="username" type="text" /> 
+		  </div>
+		  <div class="control-group">
+			<label class="control-label" for="id_password1"><p>密码：</p></label> 
+			<input class="input-xlarge" id="id_password1" name="password1" placeholder="密码长度不少于6" type="password" />
+		  </div>
+		  <div class="control-group">
+			<label class="control-label" for="id_password2"><p>密码确认：</p></label> 
+			<input class="input-xlarge" id="id_password2" name="password2" type="password" />
+		  </div>
+		  <div class="button_one">
+		  <input type="submit" class="button button-rounded button-flat-primary"  value="提交">
+		  </div>
+		</fieldset>
+	  </form>
+ 
+    </div>
+
+{% endblock %}

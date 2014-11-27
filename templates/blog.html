@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block title %}blog{%endblock%}
+{% block content %}
+	<div class="content-center-1">
+		<div>
+				<ul>
+				{% if blog_list %}
+				{% for i in contacts %}			
+					<li>
+						<div>
+							<h4><a href="/blog/{{ i.id }}/">{{ i.pub_date }}&nbsp;&nbsp;{{ i.title }}</a></h4>
+						</div>	
+						<p>
+			            {{ i.intro }}
+						</p>
+						<p>
+						{{ meta }}						
+						</p>
+					</li>
+					{% endfor %}
+					{% endif %}
+				</ul>
+		</div>
+		<div class="page">
+        {% if contacts.has_previous %}
+
+            <a href="?page={{ contacts.previous_page_number }}" class="has_previous">上一页</a>
+			<span class="has_center">
+            &nbsp;| &nbsp; <strong>{{ contacts.number }} / {{ contacts.paginator.num_pages }}</strong>
+			</span>
+			{% if contacts.has_next %}
+			 &nbsp;| &nbsp;<a  class="has_next" href="?page={{ contacts.next_page_number }}">下一页</a>
+			{% endif %}
+		{%else%}
+			{% if contacts.has_next %}
+			    <a href="?page={{ contacts.next_page_number }}">下一页</a>
+			{%else%}
+			        <span>
+            <a href="#"> {{ contacts.number }} / 共{{ contacts.paginator.num_pages }}页</a>
+					</span>
+			{% endif %}
+		{% endif %}
+        </div>
+	</div>
+	{% endblock %}

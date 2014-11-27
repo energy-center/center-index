@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}contact{% endblock %}
+{% block content %}
+
+
+<div id="">
+	<div class="">
+				<ul>
+				{% for i in list_test %}			
+					<li>
+						<div>
+							<h4>{{ i.title }}</h4>
+						</div>	
+					</li>
+					{% endfor %}
+				</ul>
+		</div>
+	</div> 
+	{%endblock%}

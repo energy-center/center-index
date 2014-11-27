@@ -1,0 +1,8 @@
+/*css document*/
+.red-div,.blue-div{
+	width:100px;
+	height:100px;
+	float:left;
+	background-color:#f00;
+	border:1px solid #ccc;
+}

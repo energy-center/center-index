@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}blog{%endblock%}
+{% block content %}
+	<div class="body">
+		<div class="blog">
+			<div>
+				<ul>
+				{% if blog_list %}
+				{% for i in contacts %}			
+					<li>
+						<div>
+							<h4><a href="/blog/{{ i.id }}/">{{ i.title }}</a></h4>
+							<span>Posted in <a href="#">Category Title One</a> by <a href="#">admin</a></span> <a href="blog-single.html">1 Comments</a>
+						</div>	
+						<p>
+			            {{ i.intro }}
+						</p>
+						<p>
+						{{ meta }}						
+						</p>
+					</li>
+					{% endfor %}
+					{% endif %}
+				</ul>
+			</div>
+		</div>
+	</div>
+	{% endblock %}
